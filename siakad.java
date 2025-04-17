@@ -1,19 +1,19 @@
 import java.util.Scanner;
 
 public class siakad {
-    private static Mahasiswa[] mahasiswas = {
+    static Mahasiswa[] mahasiswas = {
         new Mahasiswa("22001", "Ali Rahman", "Informatika"),
         new Mahasiswa("22002", "Budi Santoso", "Informatika"),
         new Mahasiswa("22003", "Citra Dewi", "Sistem Informasi Bisnis")
     };
 
-    private static Matakuliah[] matakuliahs = {
+    static Matakuliah[] matakuliahs = {
         new Matakuliah("MK001", "Struktur Data", 3),
         new Matakuliah("MK002", "Basis Data", 3),
         new Matakuliah("MK003", "Desain Web", 3)
     };
 
-    private static Nilai[] nilais = {
+    static Nilai[] nilais = {
         new Nilai(mahasiswas[0], matakuliahs[0], 80, 85, 90), 
         new Nilai(mahasiswas[0], matakuliahs[1], 60, 75, 70), 
         new Nilai(mahasiswas[1], matakuliahs[0], 75, 70, 80), 
@@ -58,7 +58,7 @@ public class siakad {
         } while (pilihan != 0);
     }
 
-    private static void tampilkanMenu() {
+    static void tampilkanMenu() {
         System.out.println("\n=== MENU SISTEM AKADEMIK ===");
         System.out.println("1. Tampilkan Daftar Mahasiswa");
         System.out.println("2. Tampilkan Daftar Mata Kuliah");
@@ -68,21 +68,21 @@ public class siakad {
         System.out.println("0. Keluar");
     }
 
-    private static void tampilkanDaftarMahasiswa() {
+    static void tampilkanDaftarMahasiswa() {
         System.out.println("\nDaftar Mahasiswa:");
         for (Mahasiswa mhs : mahasiswas) {
             mhs.tampilMahasiswa();
         }
     }
 
-    private static void tampilkanDaftarMatakuliah() {
+    static void tampilkanDaftarMatakuliah() {
         System.out.println("\nDaftar Mata Kuliah:");
         for (Matakuliah mk : matakuliahs) {
             mk.tampilMatakuliah();
         }
     }
 
-    private static void tampilkanDataPenilaian() {
+    static void tampilkanDataPenilaian() {
         System.out.println("\nData Penilaian:");
         for (Nilai nilai : nilais) {
             nilai.tampilNilai();
@@ -90,7 +90,7 @@ public class siakad {
     }
 
 
-    private static void cariMahasiswaByNIM() {
+    static void cariMahasiswaByNIM() {
         System.out.print("\nMasukkan NIM mahasiswa yang dicari: ");
         String nimCari = scanner.nextLine();
         

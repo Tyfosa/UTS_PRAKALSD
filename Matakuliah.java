@@ -1,7 +1,7 @@
 public class Matakuliah {
-    private String kodeMK;
-    private String namaMK;
-    private int sks;
+    String kodeMK;
+    String namaMK;
+    int sks;
 
     public Matakuliah(String kodeMK, String namaMK, int sks) {
         this.kodeMK = kodeMK;
